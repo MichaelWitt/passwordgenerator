@@ -31,7 +31,7 @@ UNC Coding Bootcamp and Trilogy Education Services for the inspiration to create
 
 Licensed under the MIT license.
 
-https://michaelwitt.github.io/passwordgenerator/LICENSE.txt
+<!-- https://michaelwitt.github.io/passwordgenerator/LICENSE.txt -->
 
 ## Contributor Covenant Code of Conduct
 
