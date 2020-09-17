@@ -2,7 +2,7 @@
 var generateBtn = document.querySelector("#generate");
 
 
-var specialSymbols = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "^", "_", "`", "{ ", "|", "}", "~"];
+var specialSymbols = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "^", "_", "`", "{", "|", "}", "~", "]"];
 
 var numberSymbols = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
@@ -12,10 +12,25 @@ var upperSymbols = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", 
 
 function generatePassword() {
   var characters = prompt('How many characters would you like in your password?');
+
+  if (characters < 8 || characters > 128) {
+    alert('Password length must be between 8 and 128 characters');
+    generatePassword();
+
+
+  }
+
   var special = confirm('Click OK if you would like special characters in your password.');
   var numbers = confirm('Click OK if you would like numbers in your password.');
   var lowercase = confirm('Click OK if you would like lowercase characters in your password.');
   var uppercase = confirm('Click OK if you would like uppercase characters in your password.');
+
+  if (!special && !numbers && !lowercase && !uppercase) {
+    alert('Please confirm at least one character type.');
+    generatePassword();
+  }
+
+
   var passwordCharacters = [];
 
 
@@ -35,11 +50,19 @@ function generatePassword() {
     passwordCharacters = passwordCharacters.concat(upperSymbols)
   };
 
-  console.log(passwordCharacters);
 
-  for (let i = 0; i < password.length; i++) {
+  var generatedPassword = ""
+
+  for (let i = 0; i < characters; i++) {
+    //generate random number between 0 and array length minus 1
+    var randomNum = Math.floor(Math.random() * passwordCharacters.length);
+    //select it from PasswordCharacters and concat to generatedPassword
+    generatedPassword += passwordCharacters[randomNum];
+
+
   }
-
+  //remove first four elements of the array and make sure that all arrays are in password. 
+  return generatedPassword;
 }
 
 
