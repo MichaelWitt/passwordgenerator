@@ -7,7 +7,7 @@ var numbers = confirm('Click OK if you would like numbers in your password.');
 var lowercase = confirm('Click OK if you would like lowercase characters in your password.');
 var upperCase = confirm('Click OK if you would like uppercase characters in your password.');
 
-// var specialSymbols = ["!", "#", "$", "%", "&", "'", "()", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "\", "']", "^", "_", "`", "{ ", "|", "}", "~"];
+var specialSymbols = ["!", "#", "$", "%", "&", "'", "()", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "^", "_", "`", "{ ", "|", "}", "~"];
 
 var numberSymbols = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
@@ -17,46 +17,55 @@ var upperSymbols = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", 
 
 
 
+for (let i = 0; i < password.length; i++) {
 
 
 
-// if (special === true) {
-//  password.push(specialSymbols)
-// };
+  if (special === true) {
+    password.push(specialSymbols)
+  };
 
-// if (numbers === true) {
-//   password.push(numberSymbols)
-// };
+  if (numbers === true) {
+    password.push(numberSymbols)
+  };
 
-// if (lowercase === true) {
-//   password.push(lowerSymbols)
-// };
+  if (lowercase === true) {
+    password.push(lowerSymbols)
+  };
 
-// if (uppercase === true) {
-//   password.push(upperSymbols)
-// };
+  if (uppercase === true) {
+    password.push(upperSymbols)
+  };
 
 
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+  // Write password to the #password input
+  function writePassword() {
+    var password = generatePassword();
+    var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+    passwordText.value = password;
+
+  }
+
+
+
+  // Add event listener to generate button
+  generateBtn.addEventListener("click", writePassword);
+
+
+
+
+
 
 }
 
 
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
-
-
 // Questions ?
 
-// I don't yet know how to add "\", "]", and some other characters into array without it closing the array or making the following variables come up with an error.
+// I don't yet know how to add "\", "]", and some other characters into array without it closing the array or making the following variables come up with an error. "[", "\", "]"
 
-// var specialSymbols = ["!", "#", "$", "%", "&", "'", "()", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "\", "']", "^", "_", "`", "{ ", "|", "}", "~"];
+// I need to figure out how to add inputted character length prompt into the password generator
 
 // Would I .push the if Statements to the password or unnecessary?
 
@@ -65,4 +74,10 @@ generateBtn.addEventListener("click", writePassword);
 // I need to figure out how password generator can select the password
 
 // I need a loop that code is in that loops every time user wants to generate a new password
+
+// When do I use functions vs If Statements vs Loops vs Variables?
+
+// For my last homework I was asked to consolidate my project into more folders. Do i just create folders for images/html/etc to do so? One time I had my index.html in a folder and it displayed the ReadMe on the page. 
+
+// What is this bracket do and when is it necessary for things like .toLowerCase()
 
