@@ -26,16 +26,6 @@ You can see all of my updates and pushes in the refactory, which displays code c
 
 UNC Coding Bootcamp and Trilogy Education Services for the inspiration & code to create.
 
-## License
-
-Licensed under the MIT license.
-
-https://michaelwitt.github.io/passwordgenerator/LICENSE.txt
-
-## Contributor Covenant Code of Conduct
-
-https://www.contributor-covenant.org/version/2/0/code_of_conduct/
-
 ## Thanks For Visiting!
 
 Come back soon :)
